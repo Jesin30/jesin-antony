@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElectroMart • Modern E-Commerce Frontend</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-content">
+      <span>🚀 InternTrack Practical Assessment Project • Developed by <strong>Jesin Antony</strong></span>
+      <span class="badge-tag">Frontend Developer Intern</span>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <span class="logo-icon">🛍️</span>
+        <span class="logo-text">Electro<span class="highlight">Mart</span></span>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search products, laptops, watches, audio..." />
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <div class="nav-actions">
+        <button id="cartBtn" class="cart-btn" aria-label="Open Shopping Cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-label">Cart</span>
+          <span id="cartCountBadge" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-tag">⚡ 2026 Collection Live</span>
+        <h1>Next-Gen Tech Gadgets & Lifestyle Gear</h1>
+        <p>Experience real-time interactive product filtering and dynamic cart state management built with responsive modern frontend architecture.</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong>12+</strong>
+            <span>Verified Items</span>
+          </div>
+          <div class="stat-item">
+            <strong>100%</strong>
+            <span>Responsive</span>
+          </div>
+          <div class="stat-item">
+            <strong>Instant</strong>
+            <span>Cart State</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Catalog Section -->
+  <main class="container catalog-section">
+    <!-- Filter Controls -->
+    <div class="controls-panel">
+      <div class="category-tabs" id="categoryTabs">
+        <button class="tab-btn active" data-category="All">All Items</button>
+        <button class="tab-btn" data-category="Laptops">Laptops</button>
+        <button class="tab-btn" data-category="Audio">Audio & Sound</button>
+        <button class="tab-btn" data-category="Wearables">Smart Watches</button>
+        <button class="tab-btn" data-category="Accessories">Accessories</button>
+      </div>
+
+      <div class="sort-control">
+        <label for="sortSelect">Sort By:</label>
+        <select id="sortSelect">
+          <option value="featured">Featured</option>
+          <option value="low-to-high">Price: Low to High</option>
+          <option value="high-to-high">Price: High to Low</option>
+          <option value="rating">Customer Rating</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="products-grid" id="productsGrid">
+      <!-- Injected by app.js -->
+    </div>
+  </main>
+
+  <!-- Cart Drawer Overlay & Panel -->
+  <div id="cartOverlay" class="cart-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-title">
+        <span>🛒</span>
+        <h3>Your Shopping Cart</h3>
+      </div>
+      <button id="closeCartBtn" class="close-btn" aria-label="Close Cart">✕</button>
+    </div>
+
+    <div id="cartItemsContainer" class="cart-items-list">
+      <!-- Injected by app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="price-row">
+        <span>Subtotal</span>
+        <strong id="subtotalDisplay">₹0</strong>
+      </div>
+      <div class="price-row text-muted">
+        <span>GST & Handling (18%)</span>
+        <span id="taxDisplay">₹0</span>
+      </div>
+      <div class="price-divider"></div>
+      <div class="price-row total-row">
+        <span>Final Total</span>
+        <strong id="totalDisplay" class="highlight">₹0</strong>
+      </div>
+
+      <button id="checkoutBtn" class="checkout-btn">
+        Proceed to Checkout 💳
+      </button>
+    </div>
+  </aside>
+
+  <!-- Order Confirmation Modal -->
+  <div id="checkoutModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-icon">🎉</div>
+      <h2>Order Placed Successfully!</h2>
+      <p>Thank you for testing the e-commerce state management workflow. Your simulated order has been registered.</p>
+      <div class="order-summary-box" id="modalOrderSummary">
+        <!-- Injected -->
+      </div>
+      <button id="closeModalBtn" class="primary-modal-btn">Continue Exploring</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Item added to cart!</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 ElectroMart • Frontend Practical Assessment Task for <strong>Infosys</strong></p>
+      <p>Developer: <strong>Jesin Antony</strong> (<a href="mailto:jesinantony2004@gmail.com">jesinantony2004@gmail.com</a>)</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
